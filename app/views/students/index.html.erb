@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Student Results</h1>
+
+<%= link_to 'New Student', new_student_path, class: "btn btn-primary" %><br>
+<br>
+<br>
+
+
+<table class = "table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Registration number</th>
+      <th>Update Results</th>
+      <th>Cancel Student</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= link_to student.registration_number, student%></td>
+        <td><%= link_to 'Update', edit_student_path(student), class: "btn btn-primary" %></td>
+        <td><%= link_to 'Disqualify',  student, method: :delete, data: { confirm: 'Are you sure you want to disqualify the above student'}, class: "btn btn-danger"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= link_to 'Back', root_path %><br>

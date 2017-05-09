@@ -1,0 +1,339 @@
+<p id="notice"><%= notice %></p>
+<h3><%= @student.name%>'s Results</h3>
+<br>
+<p>
+  <strong>Registration number:</strong>
+  <%= @student.registration_number %>
+</p>
+
+<p>
+  <strong>Student number:</strong>
+  <%= @student.student_number %>
+</p>
+<br>
+<table class = "table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Subject</th>
+			<th>Mark</th>
+			<th>Credit Units</th>
+			<th>Grade Point</th>
+			<th>Grade</th>
+			<th>Rematks</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Research Methodology</td>
+		<td><%= @student.bit2207 %></td>
+		<td>4</td>
+		<td>
+			<% if @student.bit2207 >= 80 %>
+			5.0
+			<% elsif @student.bit2207 >= 75 %>
+			4.5
+			<% elsif @student.bit2207 >= 70 %>
+			4.0
+			<% elsif @student.bit2207 >= 65 %>
+			3.5
+			<% elsif @student.bit2207 >= 60 %>
+			3.0
+			<% elsif @student.bit2207 >= 55 %>
+			2.5
+			<% elsif @student.bit2207 >= 50 %>
+			2.0
+			<% elsif @student.bit2207 >= 45 %>
+			1.5
+			<% elsif @student.bit2207 >= 40 %>
+			1.0
+			<% else %>
+			0.0
+			<% end %>
+		</td>
+		<td>
+			<% if @student.bit2207 >= 90 %>
+			A+
+			<% elsif @student.bit2207 >= 80 %>
+			A
+			<% elsif @student.bit2207 >= 75 %>
+			B+
+			<% elsif @student.bit2207 >= 70 %>
+			B
+			<% elsif @student.bit2207 >= 65 %>
+			C+
+			<% elsif @student.bit2207 >= 60 %>
+			C
+			<% elsif @student.bit2207 >= 55 %>
+			D+
+			<% elsif @student.bit2207 >= 50 %>
+			D
+			<% elsif @student.bit2207 >= 45 %>
+			E
+			<% elsif @student.bit2207 >= 40 %>
+			E-
+			<% else %>
+			F
+			<% end %>
+		</td>
+		<td>
+			<% if @student.bit2207 >= 50 %>
+			Normal
+			<% else %>
+			Paper to be retaken
+			<% end %>
+		</td>
+	</tr>
+	<tr>
+		<td>Operating Systems</td>
+		<td><%= @student.csc2200 %></td>
+		<td>3</td>
+		<td><% if @student.csc2200 >= 80 %>
+			5.0
+			<% elsif @student.csc2200 >= 75 %>
+			4.5
+			<% elsif @student.csc2200 >= 70 %>
+			4.0
+			<% elsif @student.csc2200 >= 65 %>
+			3.5
+			<% elsif @student.csc2200 >= 60 %>
+			3.0
+			<% elsif @student.csc2200 >= 55 %>
+			2.5
+			<% elsif @student.csc2200 >= 50 %>
+			2.0
+			<% elsif @student.csc2200 >= 45 %>
+			1.5
+			<% elsif @student.csc2200 >= 40 %>
+			1.0
+			<% else %>
+			0.0
+			<% end %></td>
+		<td><% if @student.csc2200 >= 90 %>
+			A+
+			<% elsif @student.csc2200 >= 80 %>
+			A
+			<% elsif @student.csc2200 >= 75 %>
+			B+
+			<% elsif @student.csc2200 >= 70 %>
+			B
+			<% elsif @student.csc2200 >= 65 %>
+			C+
+			<% elsif @student.csc2200 >= 60 %>
+			C
+			<% elsif @student.csc2200 >= 55 %>
+			D+
+			<% elsif @student.csc2200 >= 50 %>
+			D
+			<% elsif @student.csc2200 >= 45 %>
+			E
+			<% elsif @student.csc2200 >= 40 %>
+			E-
+			<% else %>
+			F
+			<% end %>
+		</td>
+		<td>
+			<% if @student.csc2200 >= 50 %>
+			Normal
+			<% else %>
+			Paper to be retaken
+			<% end %>
+		</td>
+	</tr>
+	<tr>
+		<td>Systems Programming</td>
+		<td><%= @student.csc2209 %></td>
+		<td>4</td>
+		<td>
+			<% if @student.csc2209 >= 80 %>
+			5.0
+			<% elsif @student.csc2209 >= 75 %>
+			4.5
+			<% elsif @student.csc2209 >= 70 %>
+			4.0
+			<% elsif @student.csc2209 >= 65 %>
+			3.5
+			<% elsif @student.csc2209 >= 60 %>
+			3.0
+			<% elsif @student.csc2209 >= 55 %>
+			2.5
+			<% elsif @student.csc2209 >= 50 %>
+			2.0
+			<% elsif @student.csc2209 >= 45 %>
+			1.5
+			<% elsif @student.csc2209 >= 40 %>
+			1.0
+			<% else %>
+			0.0
+			<% end %>
+		</td>
+		<td>
+			<% if @student.csc2209 >= 90 %>
+			A+
+			<% elsif @student.csc2209 >= 80 %>
+			A
+			<% elsif @student.csc2209 >= 75 %>
+			B+
+			<% elsif @student.csc2209 >= 70 %>
+			B
+			<% elsif @student.csc2209 >= 65 %>
+			C+
+			<% elsif @student.csc2209 >= 60 %>
+			C
+			<% elsif @student.csc2209 >= 55 %>
+			D+
+			<% elsif @student.csc2209 >= 50 %>
+			D
+			<% elsif @student.csc2209 >= 45 %>
+			E
+			<% elsif @student.csc2209 >= 40 %>
+			E-
+			<% else %>
+			F
+			<% end %>
+		</td>
+		<td>
+			<% if @student.csc2209 >= 50 %>
+			Normal
+			<% else %>
+			Paper to be retaken
+			<% end %>
+		</td>
+	</tr>
+	<tr>
+		<td>Automata, Complexity and Computability</td>
+		<td><%= @student.csc2210 %></td>
+		<td>5</td>
+		<td>
+			<% if @student.csc2210 >= 80 %>
+			5.0
+			<% elsif @student.csc2210 >= 75 %>
+			4.5
+			<% elsif @student.csc2210 >= 70 %>
+			4.0
+			<% elsif @student.csc2210 >= 65 %>
+			3.5
+			<% elsif @student.csc2210 >= 60 %>
+			3.0
+			<% elsif @student.csc2210 >= 55 %>
+			2.5
+			<% elsif @student.csc2210 >= 50 %>
+			2.0
+			<% elsif @student.csc2210 >= 45 %>
+			1.5
+			<% elsif @student.csc2210 >= 40 %>
+			1.0
+			<% else %>
+			0.0
+			<% end %>
+		</td>
+		<td>
+			<% if @student.csc2210 >= 90 %>
+			A+
+			<% elsif @student.csc2210 >= 80 %>
+			A
+			<% elsif @student.csc2210 >= 75 %>
+			B+
+			<% elsif @student.csc2210 >= 70 %>
+			B
+			<% elsif @student.csc2210 >= 65 %>
+			C+
+			<% elsif @student.csc2210 >= 60 %>
+			C
+			<% elsif @student.csc2210 >= 55 %>
+			D+
+			<% elsif @student.csc2210 >= 50 %>
+			D
+			<% elsif @student.csc2210 >= 45 %>
+			E
+			<% elsif @student.csc2210 >= 40 %>
+			E-
+			<% else %>
+			F
+			<% end %>
+		</td>
+		<td>
+			<% if @student.csc2210 >= 50 %>
+			Normal
+			<% else %>
+			Paper to be retaken
+			<% end %>
+		</td>
+	</tr>
+	<tr>
+		<td>Logic Programming</td>
+		<td><%= @student.csc1209 %></td>
+		<td>5</td>
+		<td>
+			<% if @student.csc1209 >= 80 %>
+			5.0
+			<% elsif @student.csc1209 >= 75 %>
+			4.5
+			<% elsif @student.csc1209 >= 70 %>
+			4.0
+			<% elsif @student.csc1209 >= 65 %>
+			3.5
+			<% elsif @student.csc1209 >= 60 %>
+			3.0
+			<% elsif @student.csc1209 >= 55 %>
+			2.5
+			<% elsif @student.csc1209 >= 50 %>
+			2.0
+			<% elsif @student.csc1209 >= 45 %>
+			1.5
+			<% elsif @student.csc1209 >= 40 %>
+			1.0
+			<% else %>
+			0.0
+			<% end %>
+		</td>
+		<td>
+			<% if @student.csc1209 >= 90 %>
+			A+
+			<% elsif @student.csc1209 >= 80 %>
+			A
+			<% elsif @student.csc1209 >= 75 %>
+			B+
+			<% elsif @student.csc1209 >= 70 %>
+			B
+			<% elsif @student.csc1209 >= 65 %>
+			C+
+			<% elsif @student.csc1209 >= 60 %>
+			C
+			<% elsif @student.csc1209 >= 55 %>
+			D+
+			<% elsif @student.csc1209 >= 50 %>
+			D
+			<% elsif @student.csc1209 >= 45 %>
+			E
+			<% elsif @student.csc1209 >= 40 %>
+			E-
+			<% else %>
+			F
+			<% end %>
+		</td>
+		<td>
+			<% if @student.csc1209 >= 50 %>
+			Normal
+			<% else %>
+			Paper to be retaken
+			<% end %>
+		</td>
+	</tr>
+	</tbody>
+</table>
+<br>
+<br>
+<h5>Results Summary</h5>
+<br>
+<table class = "table table-bordered table-striped">
+<thead>
+	<tr><th>Cumulative Point Average</th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>Will have the cgpa value here shortly</td>
+	</tr>
+</tbody>
+</table>
+<%= link_to 'Back', students_path %>

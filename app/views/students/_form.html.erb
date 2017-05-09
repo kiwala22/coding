@@ -1,0 +1,53 @@
+<%= form_for @student do |f| %>
+  <% if student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :registration_number %>
+    <%= f.text_field :registration_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :student_number %>
+    <%= f.text_field :student_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bit2207 %><br>
+    <%= f.text_field :bit2207%>
+  </div>
+  <div class="field">
+    <%= f.label :csc2200 %><br>
+    <%= f.text_field :csc2200%>
+  </div>
+  <div class="field">
+    <%= f.label :csc2209 %><br>
+    <%= f.text_field :csc2209%>
+  </div>
+  <div class="field">
+    <%= f.label :csc2210 %><br>
+    <%= f.text_field :csc2210%>
+  </div>
+  <div class="field">
+    <%= f.label :csc1209 %><br>
+    <%= f.text_field :csc1209%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Save', class: "btn btn-primary" %>
+  </div>
+<% end %>

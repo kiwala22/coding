@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  registration_number: MyString
+  student_number: 9.99
+  name: MyString
+  results: 
+
+two:
+  registration_number: MyString
+  student_number: 9.99
+  name: MyString
+  results: 
