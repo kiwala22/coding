@@ -40,6 +40,8 @@ gem 'devise'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3'
 gem 'bootstrap-sass', '~> 2.3.2'
+#use the gem below for pdf generation
+gem 'prawn'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

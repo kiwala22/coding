@@ -29,7 +29,7 @@
 		<td>4</td>
 		<td>
 			<% if @student.bit2207 >= 80 %>
-			5.0
+			5
 			<% elsif @student.bit2207 >= 75 %>
 			4.5
 			<% elsif @student.bit2207 >= 70 %>
@@ -336,4 +336,7 @@
 	</tr>
 </tbody>
 </table>
+<br>
+ <p><%= link_to "Create PDF", students_path(:format => 'pdf') %></p>
+ <br>
 <%= link_to 'Back', students_path %>

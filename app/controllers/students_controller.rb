@@ -4,9 +4,17 @@ class StudentsController < ApplicationController
     @students = Student.all
   end
   def show
-  @student = Student.find(params[:id])
-  #@grade = Grade.find(params[:grade_point])
-  #send_data(@student, :type => @student.results, :filename => @student.results, :disposition => 'download')
+    @student = Student.find(params[:id])
+     respond_to do |format|
+        format.html
+        format.pdf do
+          pdf = StudentPdf.new(@student, view_context)
+          send_data pdf.render, filename: 
+          "student_#{@student.created_at.strftime("%d/%m/%Y")}.pdf",
+          type: "application/pdf",
+          disposition: "inline"
+        end
+      end
   end
   def new
     @student = Student.new
@@ -52,4 +60,5 @@ class StudentsController < ApplicationController
     def student_params
       params.require(:student).permit(:registration_number, :student_number, :name, :bit2207, :csc2200, :csc2209, :csc2210, :csc1209)
     end
+
 end
