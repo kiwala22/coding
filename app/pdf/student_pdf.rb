@@ -1,7 +1,7 @@
 class StudentPdf < Prawn::Document
-	 def initialize(student, view)
+	 def initialize(student, show)
 	    super()
-	    @student = student
+	    @student = stundent
 	    @view = view
 	   text "Student results"
 	  end

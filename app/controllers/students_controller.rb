@@ -5,15 +5,14 @@ class StudentsController < ApplicationController
   end
   def show
     @student = Student.find(params[:id])
-     respond_to do |format|
-        format.html
-        format.pdf do
-          pdf = StudentPdf.new(@student, view_context)
-          send_data pdf.render, filename: 
-          "student_#{@student.created_at.strftime("%d/%m/%Y")}.pdf",
-          type: "application/pdf",
-          disposition: "inline"
-        end
+    html = render_to_string(:layout => false , :action => "show.html.erb")
+    pdf = PDFKit.new(html)
+    #need a button to activate the pdf download
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @student }
+      format.pdf {  send_data(pdf.to_pdf,  :filename => "#{@student.name}.pdf",
+            :type => 'application/pdf', :disposition => 'inline') }
       end
   end
   def new

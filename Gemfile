@@ -42,6 +42,9 @@ gem 'mini_magick', '~> 4.3'
 gem 'bootstrap-sass', '~> 2.3.2'
 #use the gem below for pdf generation
 gem 'prawn'
+#for generating pdf of the current page
+gem "pdfkit"
+gem "wkhtmltopdf-binary"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

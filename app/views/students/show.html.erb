@@ -332,11 +332,11 @@
 </thead>
 <tbody>
 	<tr>
-		<td>Will have the cgpa value here shortly</td>
+		<td>CGPA will be available shortly.</td>
 	</tr>
 </tbody>
 </table>
 <br>
- <p><%= link_to "Create PDF", students_path(:format => 'pdf') %></p>
+ <p><%= link_to "Download Results", "#{@student.id}.pdf"%></p>
  <br>
 <%= link_to 'Back', students_path %>
